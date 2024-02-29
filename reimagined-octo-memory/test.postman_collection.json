@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "14d3c704-a4fd-4500-b920-c3f623920dbb",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4462094"
+	},
+	"item": [
+		{
+			"name": "New request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":2,\"first_name\":\"Thacher\",\"last_name\":\"Linnett\",\"gender\":\"Male\",\"phone_number\":\"194-129-0724\",\"email\":\"tlinnett1@upenn.edu\",\"address\":\"278 Talmadge Park\",\"visit_date\":\"9/13/2017\",\"diagnosis\":\"A968\",\"drug_code\":\"43742-0299\",\"additional_information\":[{\"notes\":\"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\\n\\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\\n\\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\",\"new_patient\":false,\"race\":\"Puerto Rican\",\"ssn\":\"735-91-0685\"}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/patient",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

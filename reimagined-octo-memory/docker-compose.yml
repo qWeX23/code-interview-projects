@@ -1,0 +1,36 @@
+volumes:
+  data:
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    healthcheck:
+      test: mongosh --norc --quiet --host=localhost:27017 --eval "db.getMongo()"
+      interval: 15s
+      timeout: 2s
+      retries: 3
+      start_period: 5s
+    networks:
+      - backend
+
+  api:
+    # env_file:
+    #   - .env
+    build: 
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:8080
+    networks:
+      - backend
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+networks:
+  backend:
